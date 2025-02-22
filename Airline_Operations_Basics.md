@@ -26,6 +26,8 @@ When the pilot is ready to push back on the tractor and removes the chocks, and 
 
 These departments have been running long before computer systems were introduced. Over time, applications were developed to support their functions.
 
+---
+
 ### How do these departments work?
 
 - **Network Planning & Scheduling:** This is run by **Sabre Schedule Manager**. It optimizes schedules for better aircraft utilization.
@@ -51,4 +53,47 @@ Let’s say your aircraft utilization is 14 hours, which is quite good. One reas
 A study was conducted to analyze how many inputs and outputs come into the **Movement Manager** system. It was found that the Movement Manager receives flight plans, passenger boarding numbers, and fuel data, but there was a gap in engineering information, which the **Ops controllers** had to manually input.
 
 The **Ops Controller** doesn’t directly operate the aircraft; instead, they focus on managing the incoming data from various systems. Their goal is simple: how can they get the aircraft on time? If an incoming aircraft is delayed, the **Ops Controller** may need to hold another aircraft on the ground until the delayed one arrives, in order to deal with connecting passengers. They are constantly adjusting aircraft assignments, swapping flights, and making decisions to minimize delays. This is why we say that the **Ops Controller** wears the "commercial hat" of operations, balancing the airline's operational and financial needs.
+
+---
+
+- **Maintenance & Engineering:** This department uses **AMOS: MRO** (Maintenance, Repair, and Overhaul) to ensure aircraft are safe to fly and always regulatory compliant. It also improves dispatch reliability, aircraft availability, and maintenance yield.
+
+Every time a plane lands, it "dies" — meaning it requires inspection before it can return to service. This inspection is known as the **Arrival/Departure Check**. On the ground, these checks are often referred to as **"Tel-Paani checks"**. After flying over a set number of hours (typically around 1,000 hours), an aircraft is grounded for a maintenance check. Even if the aircraft seems fine, it cannot be flown if the maintenance check has expired — it’s illegal, and you could face serious consequences, including jail time.
+
+This information drives the **Operations Controller** to manage aircraft swapping. For example, if a maintenance check costs a significant amount of money (e.g., ₹50 Lakhs), and an aircraft has completed 1,000 hours of flying, the airline wants to maximize its utilization before the check. If the aircraft is sent to an outstation, it cannot fly back until the check is completed, but hangar space may be limited. So, the **Ops Controller** must plan and schedule maintenance carefully to avoid wasting time and money.
+
+Around 15 years ago, some innovative people at Sabre developed a system that integrated into **Movement Manager**, displaying an indicator showing how many hours were left before an aircraft needed its next maintenance check. This allowed the **Ops Controller** to plan flights more efficiently, ensuring that the aircraft would be flown until the maintenance window, with as few remaining hours as possible, thus maximizing maintenance yield.
+
+The **AMOS** system ensures no checks are missed, and every hour of an aircraft’s operational life is optimized. This helps improve dispatch reliability, aircraft availability, and maintenance yield. 
+
+- **Maintenance Yield** refers to the optimal use of the aircraft’s flying hours before maintenance is required.
+- **Dispatch Reliability** is a key term used for on-time performance without engineering defects.
+- **Aircraft Availability** is an important KPI; ideally, no more than 20% of an airline’s fleet should be grounded for maintenance at any given time. If maintenance delays drag on and a significant portion of the fleet is grounded, the airline loses revenue, as commercial teams cannot make money from planes that are out of service.
+
+By tracking these KPIs, **Ops Controllers** provide valuable data to leadership, allowing them to track fleet availability and maintenance performance.
+
+---
+
+- **Flight Dispatch:** This is managed by **CAE: Flight Plan Manager**. This system creates optimized flight plans that reduce fuel costs and other flight-related expenses.
+
+For any flight, a pilot requires a flight plan. Aircraft don’t fly in a straight line — they follow a planned route. This is especially important because, on Earth, only 28% of the surface is land, and the rest is water. Aircraft are not permitted to fly too far from land. International regulations state that if one engine fails, the aircraft must be able to reach an alternate airport within a certain time frame (typically 90 minutes). Therefore, aircraft must always stay within 90 minutes of a diversionary airport.
+
+The second crucial factor in flight planning is navigation. Ground-based **VOR (VHF Omnidirectional Range)** and **DME (Distance Measuring Equipment)** stations emit signals that are received by the aircraft's **FMC (Flight Management Computer)**. These signals help pilots navigate using waypoints, defined by latitude and longitude, as they fly across these ground stations.
+
+The two most expensive elements in the aviation industry are crew and fuel. The **Flight Plan Manager** creates the most optimized flight plan by calculating the cheapest route, factoring in not only fuel costs but also other fees such as overflying charges, airport charges, and parking fees. By using a complex algorithm, it helps airlines choose the most cost-effective route from point A to point B.
+
+---
+
+- **Load Management:** **Netline Load- Load & Trim** is responsible for informing flight crews about an aircraft's takeoff weight, the center of gravity position, and the required stabilizer trim setting. An incorrectly trimmed aircraft could be too nose-heavy or tail-heavy, posing significant risks during takeoff and landing.
+
+If you observe an aircraft, the jet bridge is always connected to the left side of the plane, but never the right side. That’s because the cargo door is on the left side. The loading process starts with the front cargo hold, followed by the rear cargo hold, and then the bulk cargo hold. Proper load distribution is crucial for maintaining the correct **center of gravity**.
+
+The **center of gravity** in a load and trim sheet is calculated based on how much weight is in the front cargo hold versus the rear. The pilot receives this load and trim data, consults a manual chart, and sets the aircraft's horizontal stabilizer based on the aircraft’s center of gravity. If this is wrong, it can lead to a dangerous situation, possibly even a crash.
+
+That’s why **Load Management** is critical — it ensures the correct weight distribution and that the aircraft is balanced properly for takeoff and landing. Every day, it gives accurate counts on how the cargo is loaded, and this information is essential for the safe operation of the aircraft. **Netline Load** plays a key role in ensuring the aircraft’s safety, as well as the safety of passengers and crew.
+
+---
+
+
+
 
